@@ -17,7 +17,7 @@
 		<hibernate.version>3.6.4.Final</hibernate.version>						
 		<biojava.version>3.0.1</biojava.version>
 		<biojava.legacy.version>1.8.1</biojava.legacy.version>
-		<wro4j.version>1.3.6</wro4j.version>
+		<wro4j.version>1.3.7</wro4j.version>
 		<jackson.version>1.8.1</jackson.version>
 		<guava.version>r09</guava.version>
 		<extdirectspring.version>1.0.9</extdirectspring.version>
