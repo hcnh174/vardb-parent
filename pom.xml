@@ -14,19 +14,20 @@
 		<spring.version>3.1.0.M1</spring.version>		
 		<spring-security.version>3.1.0.RC2</spring-security.version>
 		<spring.batch.version>2.1.6.RELEASE</spring.batch.version>
-		<hibernate.version>3.6.4.Final</hibernate.version>						
+		<spring.data.jpa.version>1.0.0.M2</spring.data.jpa.version>
+		<!-- <spring.data.jpa.version>1.0.0.BUILD-SNAPSHOT</spring.data.jpa.version>	-->	
+		<spring.data.mongodb.version>1.0.0.M2</spring.data.mongodb.version>					
 		<biojava.version>3.0.1</biojava.version>
 		<biojava.legacy.version>1.8.1</biojava.legacy.version>
-		<wro4j.version>1.3.7</wro4j.version>
-		<jackson.version>1.8.1</jackson.version>
 		<guava.version>r09</guava.version>
-		<extdirectspring.version>1.0.9</extdirectspring.version>
-		<freemarker.version>2.3.18</freemarker.version>
-		<spring.data.jpa.version>1.0.0.M2</spring.data.jpa.version>
-		<spring.data.mongodb.version>1.0.0.M2</spring.data.mongodb.version>
+		<hibernate.version>3.6.4.Final</hibernate.version>
 		<hibernate.validator.version>4.1.0.Final</hibernate.validator.version>
 		<mongo.driver.version>2.6.1</mongo.driver.version>
 		<weka.version>3.6.0</weka.version>
+		<freemarker.version>2.3.18</freemarker.version>
+		<extdirectspring.version>1.0.9</extdirectspring.version>
+		<wro4j.version>1.3.7</wro4j.version>
+		<jackson.version>1.8.1</jackson.version>
     </properties>
 	<repositories>
 		<repository>
@@ -39,21 +40,35 @@
 			<name>BioJava repository</name>
 			<url>http://www.biojava.org/download/maven/</url>	
 		</repository>
+		<!-- 
 		<repository>  		
 			<id>morphia-maven-repo</id>
 			<name>Morphia repository</name>
 			<url>http://morphia.googlecode.com/svn/mavenrepo/</url>	
 		</repository>
+		 -->
         <repository>
             <id>spring-maven-release</id>
             <name>Spring Maven Release Repository</name>
             <url>http://maven.springframework.org/release</url>
         </repository>
         <repository>
+			 <id>spring-milestone</id>
+			 <name>Spring Maven MILESTONE Repository</name>
+			 <url>http://maven.springframework.org/milestone</url>
+		</repository>
+        <!-- 
+        <repository>
             <id>spring-maven-milestone</id>
             <name>Spring Maven Milestone Repository</name>
             <url>http://maven.springframework.org/milestone</url>
         </repository>
+         -->
+        <repository>
+			 <id>spring-snapshot</id>
+			 <name>Spring Maven SNAPSHOT Repository</name>
+			 <url>http://s3.amazonaws.com/maven.springframework.org/snapshot</url>
+		</repository>
         <repository>
             <id>spring-roo-repository</id>
             <name>Spring Roo Repository</name>
