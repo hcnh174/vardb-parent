@@ -11,12 +11,13 @@
 		<roo.version>1.1.4.RELEASE</roo.version>
 		<aspectj.version>1.6.11</aspectj.version>
 		<slf4j.version>1.6.1</slf4j.version>
+		<spring.version>3.0.5.RELEASE</spring.version>		
+		<spring-security.version>3.0.5.RELEASE</spring-security.version>
+		<!-- 
 		<spring.version>3.1.0.M2</spring.version>		
 		<spring-security.version>3.1.0.RC2</spring-security.version>
-		<spring.batch.version>2.1.6.RELEASE</spring.batch.version>
-		<!-- <spring.data.jpa.version>1.0.0.M2</spring.data.jpa.version>	-->	
-		<spring.data.jpa.version>1.0.0.BUILD-SNAPSHOT</spring.data.jpa.version>
-		<spring.data.mongodb.version>1.0.0.M3</spring.data.mongodb.version>					
+		 -->
+		<spring.batch.version>2.1.6.RELEASE</spring.batch.version>	
 		<biojava.version>3.0.1</biojava.version>
 		<biojava.legacy.version>1.8.1</biojava.legacy.version>
 		<guava.version>r09</guava.version>
@@ -40,13 +41,6 @@
 			<name>BioJava repository</name>
 			<url>http://www.biojava.org/download/maven/</url>	
 		</repository>
-		<!-- 
-		<repository>  		
-			<id>morphia-maven-repo</id>
-			<name>Morphia repository</name>
-			<url>http://morphia.googlecode.com/svn/mavenrepo/</url>	
-		</repository>
-		 -->
         <repository>
             <id>spring-maven-release</id>
             <name>Spring Maven Release Repository</name>
@@ -57,13 +51,6 @@
 			 <name>Spring Maven MILESTONE Repository</name>
 			 <url>http://maven.springframework.org/milestone</url>
 		</repository>
-        <!-- 
-        <repository>
-            <id>spring-maven-milestone</id>
-            <name>Spring Maven Milestone Repository</name>
-            <url>http://maven.springframework.org/milestone</url>
-        </repository>
-         -->
         <repository>
 			 <id>spring-snapshot</id>
 			 <name>Spring Maven SNAPSHOT Repository</name>
@@ -168,13 +155,7 @@
             <artifactId>flexjson</artifactId>
             <version>2.1</version>
         </dependency>
-        <!-- ROO dependencies -->
-        <dependency>
-            <groupId>org.springframework.roo</groupId>
-            <artifactId>org.springframework.roo.annotations</artifactId>
-            <version>${roo.version}</version>
-            <scope>provided</scope>
-        </dependency>
+
         <!-- Spring dependencies -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -229,6 +210,69 @@
             <artifactId>spring-orm</artifactId>
             <version>${spring.version}</version>
         </dependency>
+            	<dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    	<dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!-- 
+    	<dependency>
+            <groupId>org.springframework.webflow</groupId>
+            <artifactId>spring-js-resources</artifactId>
+            <version>2.2.1.RELEASE</version>
+        </dependency>
+       	-->
+       	<!--  spring security -->
+       	<dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>${spring-security.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    	<dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${spring-security.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    	<dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${spring-security.version}</version>
+        </dependency>
+    	<dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-taglibs</artifactId>
+            <version>${spring-security.version}</version>
+        </dependency>
+        <!--  spring batch -->
         <dependency>
 			<groupId>org.springframework.batch</groupId>
 			<artifactId>spring-batch-core</artifactId>
@@ -239,16 +283,16 @@
 			<artifactId>spring-batch-infrastructure</artifactId>
 			<version>${spring.batch.version}</version>
 		</dependency>
-		<dependency>
-		    <groupId>org.springframework.data</groupId>
-		    <artifactId>spring-data-jpa</artifactId>
-		    <version>${spring.data.jpa.version}</version>
-		</dependency>
-		<dependency>
-		    <groupId>org.springframework.data</groupId>
-		    <artifactId>spring-data-mongodb</artifactId>
-		    <version>${spring.data.mongodb.version}</version>
-		</dependency>
+        <!-- ROO dependencies -->
+        <dependency>
+            <groupId>org.springframework.roo</groupId>
+            <artifactId>org.springframework.roo.annotations</artifactId>
+            <version>${roo.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        
+        
+        
     	<dependency>
             <groupId>postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -363,33 +407,7 @@
             <artifactId>tiles-jsp</artifactId>
             <version>2.2.1</version>
         </dependency>
-    	<dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-            <version>${spring.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>commons-logging</groupId>
-                    <artifactId>commons-logging</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-    	<dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>${spring.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>commons-logging</groupId>
-                    <artifactId>commons-logging</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-    	<dependency>
-            <groupId>org.springframework.webflow</groupId>
-            <artifactId>spring-js-resources</artifactId>
-            <version>2.2.1.RELEASE</version>
-        </dependency>
+
     	<dependency>
             <groupId>commons-digester</groupId>
             <artifactId>commons-digester</artifactId>
@@ -417,38 +435,6 @@
             <artifactId>joda-time</artifactId>
             <version>1.6</version>
         </dependency>    
-    	<dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-core</artifactId>
-            <version>${spring-security.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>commons-logging</groupId>
-                    <artifactId>commons-logging</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-    	<dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-config</artifactId>
-            <version>${spring-security.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>commons-logging</groupId>
-                    <artifactId>commons-logging</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-    	<dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-web</artifactId>
-            <version>${spring-security.version}</version>
-        </dependency>
-    	<dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-taglibs</artifactId>
-            <version>${spring-security.version}</version>
-        </dependency>
         <dependency>
 	      <groupId>ch.ralscha</groupId>
 	      <artifactId>extdirectspring</artifactId>
