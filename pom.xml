@@ -26,9 +26,9 @@
 		<mongo.driver.version>2.6.1</mongo.driver.version>
 		<weka.version>3.6.0</weka.version>
 		<freemarker.version>2.3.18</freemarker.version>
-		<extdirectspring.version>1.0.10</extdirectspring.version>
+		<extdirectspring.version>1.0.11</extdirectspring.version>
 		<wro4j.version>1.3.8</wro4j.version>
-		<jackson.version>1.8.2</jackson.version>
+		<jackson.version>1.8.3</jackson.version>
     </properties>
 	<repositories>
 		<repository>
@@ -179,6 +179,11 @@
                     <artifactId>commons-logging</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
