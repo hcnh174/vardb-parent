@@ -11,24 +11,23 @@
 		<roo.version>1.1.4.RELEASE</roo.version>
 		<aspectj.version>1.6.11.RELEASE</aspectj.version>
 		<slf4j.version>1.6.1</slf4j.version>
-		<spring.version>3.0.5.RELEASE</spring.version>		
-		<spring-security.version>3.0.5.RELEASE</spring-security.version>
+		<spring.version>3.0.6.RELEASE</spring.version>		
+		<spring-security.version>3.0.7.RELEASE</spring-security.version>
 		<!-- 
 		<spring.version>3.1.0.M2</spring.version>		
 		<spring-security.version>3.1.0.RC2</spring-security.version>
 		 -->
-		<spring.batch.version>2.1.6.RELEASE</spring.batch.version>	
-		<biojava.version>3.0.1</biojava.version>
+		<spring.batch.version>2.1.7.RELEASE</spring.batch.version>	
+		<biojava.version>3.0.2</biojava.version>
 		<biojava.legacy.version>1.8.1</biojava.legacy.version>
 		<guava.version>r09</guava.version>
-		<hibernate.version>3.6.5.Final</hibernate.version>
+		<hibernate.version>3.6.7.Final</hibernate.version>
 		<hibernate.validator.version>4.1.0.Final</hibernate.validator.version>
-		<mongo.driver.version>2.6.1</mongo.driver.version>
 		<weka.version>3.6.0</weka.version>
 		<freemarker.version>2.3.18</freemarker.version>
-		<extdirectspring.version>1.0.11</extdirectspring.version>
-		<wro4j.version>1.3.8</wro4j.version>
-		<jackson.version>1.8.3</jackson.version>
+		<extdirectspring.version>1.0.12</extdirectspring.version>
+		<wro4j.version>1.4.0</wro4j.version>
+		<jackson.version>1.8.5</jackson.version>
     </properties>
 	<repositories>
 		<repository>
@@ -294,10 +293,7 @@
             <artifactId>org.springframework.roo.annotations</artifactId>
             <version>${roo.version}</version>
             <scope>provided</scope>
-        </dependency>
-        
-        
-        
+        </dependency>        
     	<dependency>
             <groupId>postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -509,11 +505,6 @@
 			<groupId>org.biojava</groupId>
 			<artifactId>biojava3-structure</artifactId>
 			<version>${biojava.version}</version>
-		</dependency>		
-		<dependency>
-		    <groupId>org.mongodb</groupId>
-		    <artifactId>mongo-java-driver</artifactId>
-		    <version>${mongo.driver.version}</version>
 		</dependency>
 		<dependency>
 		  <groupId>ro.isdc.wro4j</groupId>
