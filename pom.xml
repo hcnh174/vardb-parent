@@ -22,9 +22,9 @@
 		<hibernate.validator.version>4.1.0.Final</hibernate.validator.version>
 		<weka.version>3.6.0</weka.version>
 		<freemarker.version>2.3.18</freemarker.version>
-		<extdirectspring.version>1.0.12</extdirectspring.version>
+		<extdirectspring.version>1.0.13</extdirectspring.version>
 		<wro4j.version>1.4.1</wro4j.version>
-		<jackson.version>1.9.0</jackson.version>
+		<jackson.version>1.9.1</jackson.version>
 		<!-- <postgresql.driver.version>8.4-701.jdbc3</postgresql.driver.version> -->
 		<postgresql.driver.version>9.0-801.jdbc4</postgresql.driver.version><!-- 9.1-901.jdbc4 -->
     </properties>
